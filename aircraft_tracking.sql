@@ -31,16 +31,17 @@ CREATE TABLE `aircraft` (
   `id` int(11) NOT NULL,
   `registration_number` varchar(50) NOT NULL,
   `model` varchar(100) NOT NULL,
-  `total_hours` double NOT NULL
+  `total_hours` double NOT NULL,
+  `next_inspection` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `aircraft`
 --
 
-INSERT INTO `aircraft` (`id`, `registration_number`, `model`, `total_hours`) VALUES
-(1, '9J-ADJ', 'CESSNA 210', 5255.2),
-(2, '9J-CPC', 'CESSNA 206', 12000);
+INSERT INTO `aircraft` (`id`, `registration_number`, `model`, `total_hours`, `next_inspection`) VALUES
+(1, '9J-ADJ', 'CESSNA 210', 5255.2, '100 Hour Inspection'),
+(2, '9J-CPC', 'CESSNA 206', 12000, 'Annual Inspection');
 
 -- --------------------------------------------------------
 
